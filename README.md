@@ -19,3 +19,8 @@ The testbench tb_simple_ram is written to verify the correct functioning of the 
 The simulation sequence starts by enabling the write operation (we=1) and writing three data values (A5, 5A, and FF in hexadecimal) into addresses 0, 1, and 2, respectively. After writing, the testbench switches to read mode (we=0) and reads from the same addresses to verify that the data stored is correctly retrieved. Each operation is delayed by 10 ns to align with the clock edges, ensuring proper timing for the synchronous RAM. The simulation concludes with the $finish command.
 
 To run this design in EDA Playground, both ram.v (RAM module) and tb_ram.v (testbench) files must be created. Once the code is pasted and executed, the output can be viewed in the EPWave waveform viewer. The waveform visually confirms the read and write processes, showing how data is stored during we=1 and correctly retrieved during we=0. This project demonstrates the basic design and verification of a synchronous RAM using Verilog, making it an essential foundation for more complex memory design tasks.
+
+
+<img width="1149" height="557" alt="Image" src="https://github.com/user-attachments/assets/ebc6c355-aa34-4344-bb54-55b3e39e2004" />
+
+<img width="1334" height="676" alt="Image" src="https://github.com/user-attachments/assets/21c9a1c9-a4c0-47f0-98f7-5116cf79d506" />
