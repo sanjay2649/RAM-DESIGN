@@ -1,0 +1,17 @@
+// Simple 16x8 Synchronous RAM
+module simple_ram (
+    input clk,              // Clock
+    input we,               // Write Enable
+    input [3:0] addr,       // 4-bit Address (16 locations)
+    input [7:0] data_in,    // Data input (8-bit)
+    output reg [7:0] data_out // Data output (8-bit)
+);
+    reg [7:0] mem [0:15];   // Memory array (16 x 8-bit)
+
+    always @(posedge clk) begin
+        if (we)
+            mem[addr] <= data_in; // Write operation
+        else
+            data_out <= mem[addr]; // Read operation
+    end
+endmodule
